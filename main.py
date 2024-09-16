@@ -11,7 +11,7 @@ import numpy as np  # To check for NaN values
 excel_data = pd.read_excel('Baridhara_All_Member.xlsx')
 
 # Template Word document path
-template_doc_path = 'Membership Information Collection Form.docx'
+template_doc_path = 'Membership Information Collection Form (1).docx'
 
 # Directory to save the generated documents
 output_dir = 'generated_docs'
@@ -104,13 +104,13 @@ for index, row in excel_data.iterrows():
         '{house_number_outside}': str(house_number_outside) if pd.notna(house_number_outside) else '',
         '{apt_outside}': str(apt_outside) if pd.notna(apt_outside) else '',
         # Category check marks
-        '{AM}': '✓' if category == 'AM' else '',
-        '{GM}': '✓' if category == 'GM' else '',
-        '{LM}': '✓' if category == 'LM' else '',
-        '{SM}': '✓' if category == 'SM' else '',
-        '{DM}': '✓' if category == 'DM' else '',
-        '{TR-LM}': '✓' if category == 'TR-LM' else '',
-        '{TR-SM}': '✓' if category == 'TR-SM' else '',
+        '{A}': '✓' if category == 'AM' else '',
+        '{G}': '✓' if category == 'GM' else '',
+        '{L}': '✓' if category == 'LM' else '',
+        '{S}': '✓' if category == 'SM' else '',
+        '{D}': '✓' if category == 'DM' else '',
+        '{T}': '✓' if category == 'TR-LM' else '',
+        '{TR}': '✓' if category == 'TR-SM' else '',
         # Marital status check marks
         '{Married}': '✓' if marital_status == 'Married' else '',
         '{Single}': '✓' if marital_status == 'Single' else '',
